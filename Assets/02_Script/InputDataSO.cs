@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = "SO/Player/Data/Input")]
-public class InputDataSO : ScriptableObject, InputData.ISniperActions
+public class InputDataSO : ScriptableObject, InputData.ISniperActions, IDisposable
 {
     public event Action<Vector2> OnMouseMoveEvt;
     public event Action OnMouseRightButtonDownEvt;
@@ -33,6 +33,14 @@ public class InputDataSO : ScriptableObject, InputData.ISniperActions
         inputData.Sniper.SetCallbacks(this);
         inputData.Sniper.Enable();
 
+    }
+
+    public void Dispose()
+    {
+        if (inputData == null) return;
+
+        inputData.Sniper.SetCallbacks(null);
+        inputData.Sniper.Disable();
     }
 
     public void OnMouseMove(InputAction.CallbackContext context)

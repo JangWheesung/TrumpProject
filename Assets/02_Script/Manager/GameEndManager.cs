@@ -21,6 +21,7 @@ public class GameEndManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("NextSceneIdx", 0);
         Instance = this;
 
         clearType = ClearType.None;
@@ -51,6 +52,8 @@ public class GameEndManager : MonoBehaviour
     {
         if (clearType == ClearType.None) return;
 
+        input.Dispose();
+
         int nextSceneIdx = clearType switch
         {
             ClearType.Clear => PlayerPrefs.GetInt("NextSceneIdx") + 1,
@@ -60,5 +63,10 @@ public class GameEndManager : MonoBehaviour
         PlayerPrefs.SetInt("NextSceneIdx", nextSceneIdx);
 
         SceneManager.LoadScene("Game");
+    }
+
+    private void OnDestroy()
+    {
+        input.Dispose();
     }
 }

@@ -95,4 +95,9 @@ public class SniperController : MonoBehaviour
             vignette.intensity.value = IsAiming ? 0.6f : 0f;
         }
     }
+
+    private void OnDestroy()
+    {
+        input.Dispose();
+    }
 }
