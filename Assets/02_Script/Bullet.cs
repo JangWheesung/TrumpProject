@@ -7,11 +7,20 @@ using Cinemachine;
 
 public class Bullet : MonoBehaviour
 {
+    [Header("Class")]
     [SerializeField] private SniperController sniperController;
+    [SerializeField] private Target target;
+    [Header("Object")]
     [SerializeField] private CinemachineVirtualCamera vcam;
     [SerializeField] private Volume volume;
+    [Header("Value")]
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float radius;
+    [SerializeField] private LayerMask trumpLayer;
+
     private Rigidbody rb;
+    private float currentTime = 0f;
+    private bool isRange;
 
     private void Awake()
     {
@@ -20,11 +29,92 @@ public class Bullet : MonoBehaviour
         sniperController.OnShotEvt += Fly;
     }
 
+    private void Update()
+    {
+        RangeTarget();
+        MissingTarget();
+    }
+
+    private void RangeTarget()
+    {
+        if (isRange) return;
+
+        Collider[] trumpGetCol = Physics.OverlapSphere(transform.position, radius, trumpLayer);
+
+        if (trumpGetCol.Length > 0)
+        {
+            SetSlowMotion(0.1f, 0.1f);
+
+            currentTime += Time.deltaTime;
+            if (currentTime >= 2f)
+            {
+                currentTime = 0f;
+                isRange = true;
+
+                ShotTrump();
+                SetSlowMotion(100f, 1f);
+            }
+        }
+    }
+
+    private void ShotTrump()
+    {
+        target.SetAnimEnable(false);
+
+        Ray ray = new Ray(transform.position, transform.forward);
+        bool trumpHit = Physics.Raycast(ray, 10f, trumpLayer);
+
+        if (trumpHit) //성공
+        {
+            GameEndManager.Instance.GameClearUI();
+        }
+        else //실패
+        {
+            GameEndManager.Instance.GameFailUI();
+            target.SetAnimEnable(true);
+        }
+
+        ShotEnd();
+    }
+
+    private void MissingTarget()
+    {
+        if (isRange) return;
+
+        Vector3 bulletVec = transform.right;
+        Vector3 trumpVec = (target.transform.position - transform.position).normalized;
+
+        var cross = Vector3.Cross(bulletVec, trumpVec);
+
+        if (cross.y > 0)
+        {
+            GameEndManager.Instance.GameFailUI();
+            ShotEnd();
+        }
+    }
+
+    private void ShotEnd()
+    {
+        VCamManager.Instance.VCamToTrump();
+        SetFlyVolume(false);
+    }
+
     private void Fly()
     {
-        VCamSystem.Instance.VCamToBullet();
+        VCamManager.Instance.VCamToBullet();
 
         StartCoroutine(FlyTimeSequence());
+    }
+
+    private IEnumerator FlyTimeSequence()
+    {
+        SetSlowMotion(1, 0.2f);
+        yield return new WaitForSeconds(2f);
+        SetSlowMotion(80f, 0.8f);
+
+        SetFlyVolume(true);
+
+        yield return null;
     }
 
     private void SetFlyVolume(bool value)
@@ -40,16 +130,10 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private IEnumerator FlyTimeSequence()
+    private void SetSlowMotion(float bSpeed, float aSpeed)
     {
-        bulletSpeed /= 50f;
+        bulletSpeed = bSpeed;
         rb.velocity = transform.forward * bulletSpeed;
-
-        yield return new WaitForSeconds(2f);
-
-        bulletSpeed *= 30f;
-        rb.velocity = transform.forward * bulletSpeed;
-
-        SetFlyVolume(true);
+        target.SetAnimSpeed(aSpeed);
     }
 }

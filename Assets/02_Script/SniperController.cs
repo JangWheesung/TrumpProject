@@ -50,7 +50,7 @@ public class SniperController : MonoBehaviour
         rotationX = angleX;
         rotationY = angleY;
 
-        VCamSystem.Instance.VCamToSniper();
+        VCamManager.Instance.VCamToSniper();
     }
 
     private void SniperMove(Vector2 vec)
