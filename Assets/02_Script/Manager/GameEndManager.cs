@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public enum ClearType
 {
@@ -16,6 +17,13 @@ public class GameEndManager : MonoBehaviour
 
     [Header("Input")]
     [SerializeField] private InputDataSO input;
+    [Header("UI")]
+    [SerializeField] private GameObject uiRoot;
+    [SerializeField] private TMP_Text headlineText;
+    [SerializeField] private TMP_Text messageText;
+    [Header("Value")]
+    [SerializeField] private string[] successMessages;
+    [SerializeField] private string[] failMessages;
 
     private ClearType clearType;
 
@@ -41,11 +49,25 @@ public class GameEndManager : MonoBehaviour
     public void GameClearUI()
     {
         clearType = ClearType.Clear;
+
+        uiRoot.SetActive(true);
+        headlineText.text = "Yun is Death";
+        messageText.text = GetRandomMessage(successMessages);
     }
 
     public void GameFailUI()
     {
         clearType = ClearType.Fail;
+
+        uiRoot.SetActive(true);
+        headlineText.text = "Trump is Alive";
+        messageText.text = GetRandomMessage(failMessages);
+    }
+
+    private string GetRandomMessage(string[] messages)
+    {
+        int idx = Random.Range(0, messages.Length);
+        return messages[idx];
     }
 
     private void NextGame()

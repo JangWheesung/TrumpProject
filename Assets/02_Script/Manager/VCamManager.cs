@@ -30,7 +30,7 @@ public class VCamManager : MonoBehaviour
         trumpVCam.Priority = 0;
     }
 
-    public void VCamToTrump()
+    public void VCamToTarget()
     {
         sniperVCam.Priority = 0;
         bulletVCam.Priority = 0;

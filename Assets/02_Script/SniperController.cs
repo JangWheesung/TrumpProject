@@ -38,17 +38,17 @@ public class SniperController : MonoBehaviour
         input.OnMouseLeftButtonUpEvt += Shot;
         input.OnMouseRightButtonDownEvt += () => { Animing(true); };
         input.OnMouseRightButtonUpEvt += () => { Animing(false); };
+
+        angleX = transform.eulerAngles.y;
+        angleY = transform.eulerAngles.x;
+        rotationX = angleX;
+        rotationY = angleY;
     }
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        angleX = transform.eulerAngles.y;
-        angleY = transform.eulerAngles.x;
-        rotationX = angleX;
-        rotationY = angleY;
 
         VCamManager.Instance.VCamToSniper();
     }

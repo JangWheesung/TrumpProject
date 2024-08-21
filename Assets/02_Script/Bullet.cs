@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     [Header("Object")]
     [SerializeField] private CinemachineVirtualCamera vcam;
     [SerializeField] private Volume volume;
+    [SerializeField] private GameObject bloodPrefab;
     [Header("Value")]
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float radius;
@@ -51,27 +52,32 @@ public class Bullet : MonoBehaviour
                 currentTime = 0f;
                 isRange = true;
 
-                ShotTrump();
+                ShotTarget();
                 SetSlowMotion(100f, 1f);
             }
         }
     }
 
-    private void ShotTrump()
+    private void ShotTarget()
     {
         target.SetAnimEnable(false);
 
         Ray ray = new Ray(transform.position, transform.forward);
-        bool trumpHit = Physics.Raycast(ray, 10f, trumpLayer);
+        RaycastHit hit;
+        bool trumpHit = Physics.Raycast(ray, out hit, 10f, trumpLayer);
 
         if (trumpHit) //성공
         {
+            Instantiate(bloodPrefab, hit.point + (-transform.forward * 1.7f), 
+                Quaternion.LookRotation(-transform.forward), hit.transform);
+
             GameEndManager.Instance.GameClearUI();
         }
         else //실패
         {
-            GameEndManager.Instance.GameFailUI();
             target.SetAnimEnable(true);
+
+            GameEndManager.Instance.GameFailUI();
         }
 
         ShotEnd();
@@ -95,7 +101,7 @@ public class Bullet : MonoBehaviour
 
     private void ShotEnd()
     {
-        VCamManager.Instance.VCamToTrump();
+        VCamManager.Instance.VCamToTarget();
         SetFlyVolume(false);
     }
 
