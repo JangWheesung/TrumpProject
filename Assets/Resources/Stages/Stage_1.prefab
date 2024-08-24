@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 1728385108290261136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -254.297, y: 70.64, z: 16.976}
+  m_LocalPosition: {x: -282.74, y: 83.713, z: 27.15}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2985,7 +2985,7 @@ Transform:
   m_GameObject: {fileID: 5327648217656393638}
   serializedVersion: 2
   m_LocalRotation: {x: 0.27673602, y: 0.21568753, z: -0.06388955, w: 0.9342453}
-  m_LocalPosition: {x: -263.488, y: 85.514, z: -2.954}
+  m_LocalPosition: {x: -270.69, y: 86.88, z: -5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3552,14 +3552,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7056793249478032643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1055908, y: 0.20363535, z: -0.022096746, w: 0.9730853}
-  m_LocalPosition: {x: -255.41, y: 72.12, z: 14.43}
+  m_LocalRotation: {x: 0.19108115, y: -0.06120412, z: 0.011938602, w: 0.97959155}
+  m_LocalPosition: {x: -282.224, y: 86.24, z: 23.1}
   m_LocalScale: {x: 0.8000001, y: 0.79999995, z: 0.80000013}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3485955154989601104}
   m_Father: {fileID: 3203889846887713813}
-  m_LocalEulerAnglesHint: {x: 30, y: -150, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.683, y: -6.836, z: -0.008}
 --- !u!114 &4105861884356377240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4127,7 +4127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3203889846887713813}
   m_Layer: 0
-  m_Name: Stage_0
+  m_Name: Stage_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

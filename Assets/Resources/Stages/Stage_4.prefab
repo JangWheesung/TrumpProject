@@ -706,8 +706,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728385108290261136}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -254.297, y: 70.64, z: 16.976}
+  m_LocalRotation: {x: -0, y: 0.96180516, z: -0, w: 0.27373496}
+  m_LocalPosition: {x: -307.224, y: 69.782, z: 28.688}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -715,7 +715,7 @@ Transform:
   - {fileID: 4423205353670445084}
   - {fileID: 6533002323125168429}
   m_Father: {fileID: 3203889846887713813}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 148.227, z: 0}
 --- !u!95 &2148279346952390741
 Animator:
   serializedVersion: 5
@@ -2984,8 +2984,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5327648217656393638}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27673602, y: 0.21568753, z: -0.06388955, w: 0.9342453}
-  m_LocalPosition: {x: -263.488, y: 85.514, z: -2.954}
+  m_LocalRotation: {x: 0.17801632, y: 0.22116488, z: -0.041098304, w: 0.9579703}
+  m_LocalPosition: {x: -351.18, y: 97.71, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2993,7 +2993,7 @@ Transform:
   - {fileID: 8065515165990570457}
   - {fileID: 7951510579985049846}
   m_Father: {fileID: 3203889846887713813}
-  m_LocalEulerAnglesHint: {x: 33, y: 26, z: 0}
+  m_LocalEulerAnglesHint: {x: 21.054, y: 26, z: 0}
 --- !u!114 &8603128086980323820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3552,8 +3552,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7056793249478032643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1055908, y: 0.20363535, z: -0.022096746, w: 0.9730853}
-  m_LocalPosition: {x: -255.41, y: 72.12, z: 14.43}
+  m_LocalRotation: {x: 0.19591935, y: 0.3581026, z: -0.07712929, w: 0.9096314}
+  m_LocalPosition: {x: -309.49, y: 72.15, z: 26.27}
   m_LocalScale: {x: 0.8000001, y: 0.79999995, z: 0.80000013}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4127,7 +4127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3203889846887713813}
   m_Layer: 0
-  m_Name: Stage_0
+  m_Name: Stage_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
