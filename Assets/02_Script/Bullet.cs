@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera vcam;
     [SerializeField] private Volume volume;
     [SerializeField] private GameObject bloodPrefab;
+    [SerializeField] private GameObject dustPrefab;
     [Header("Value")]
     [SerializeField] private float radius;
     [SerializeField] private LayerMask targetLayer;
@@ -66,7 +67,7 @@ public class Bullet : MonoBehaviour
         RaycastHit hit;
         if (IsTargetHit(out hit)) //성공
         {
-            Instantiate(bloodPrefab, hit.point + (-transform.forward * 1.7f), 
+            Instantiate(bloodPrefab, hit.point + (-transform.forward * 1.6f), 
                 Quaternion.LookRotation(-transform.forward), hit.transform);
 
             GameEndManager.Instance.GameClearUI();
@@ -74,6 +75,9 @@ public class Bullet : MonoBehaviour
         else //실패
         {
             target.SetAnimEnable(true);
+            Debug.Log("실패");
+            Instantiate(dustPrefab, hit.point,
+                Quaternion.LookRotation(-transform.forward), hit.transform);
 
             GameEndManager.Instance.GameFailUI();
         }
