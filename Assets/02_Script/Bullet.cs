@@ -148,10 +148,11 @@ public class Bullet : MonoBehaviour
     private bool IsTargetHit(out RaycastHit point)
     {
         Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit[] hits = Physics.RaycastAll(ray, 10f, hitLayer);
+        RaycastHit[] hits = Physics.RaycastAll(ray, 100f, hitLayer);
 
         float minDistance = 99f;
         bool hitTarget = false;
+
         point = hits[0];
 
         foreach (RaycastHit hit in hits)

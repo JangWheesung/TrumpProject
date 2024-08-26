@@ -642,7 +642,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728385108290261136}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 12f19ebd4aed3b7469b97951d0692448, type: 3}
   m_Controller: {fileID: 9100000, guid: c687cc2b707b85243b6039674b3307a3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb451a8505357a4ba2fda0a1e698b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danceIdx: 0
+  danceIdx: 7
 --- !u!54 &4484020422374339107
 Rigidbody:
   m_ObjectHideFlags: 0
