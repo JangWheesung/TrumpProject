@@ -15,12 +15,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Volume volume;
     [SerializeField] private GameObject bloodPrefab;
     [Header("Value")]
-    [SerializeField] private float bulletSpeed;
     [SerializeField] private float radius;
-    [SerializeField] private LayerMask trumpLayer;
+    [SerializeField] private LayerMask targetLayer;
+    [SerializeField] private LayerMask hitLayer;
 
     private Rigidbody rb;
     private float currentTime = 0f;
+    private float bulletSpeed;
     private bool isRange;
 
     private void Awake()
@@ -40,7 +41,7 @@ public class Bullet : MonoBehaviour
     {
         if (isRange) return;
 
-        Collider[] trumpGetCol = Physics.OverlapSphere(transform.position, radius, trumpLayer);
+        Collider[] trumpGetCol = Physics.OverlapSphere(transform.position, radius, targetLayer);
 
         if (trumpGetCol.Length > 0)
         {
@@ -62,11 +63,8 @@ public class Bullet : MonoBehaviour
     {
         target.SetAnimEnable(false);
 
-        Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
-        bool trumpHit = Physics.Raycast(ray, out hit, 10f, trumpLayer);
-
-        if (trumpHit) //성공
+        if (IsTargetHit(out hit)) //성공
         {
             Instantiate(bloodPrefab, hit.point + (-transform.forward * 1.7f), 
                 Quaternion.LookRotation(-transform.forward), hit.transform);
@@ -141,5 +139,29 @@ public class Bullet : MonoBehaviour
         bulletSpeed = bSpeed;
         rb.velocity = transform.forward * bulletSpeed;
         target.SetAnimSpeed(aSpeed);
+    }
+
+    private bool IsTargetHit(out RaycastHit point)
+    {
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit[] hits = Physics.RaycastAll(ray, 10f, hitLayer);
+
+        float minDistance = 99f;
+        bool hitTarget = false;
+        point = hits[0];
+
+        foreach (RaycastHit hit in hits)
+        {
+            Debug.Log(hit.collider.name);
+            float currentDistance = Vector3.Distance(transform.position, hit.point);
+            if (currentDistance < minDistance)
+            {
+                minDistance = currentDistance;
+                hitTarget = hit.collider.tag == "Trump_Body" ? true : false;
+
+                point = hit;
+            }
+        }
+        return hitTarget;
     }
 }

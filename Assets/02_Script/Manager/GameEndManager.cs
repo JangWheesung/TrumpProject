@@ -19,11 +19,13 @@ public class GameEndManager : MonoBehaviour
     [SerializeField] private InputDataSO input;
     [Header("UI")]
     [SerializeField] private GameObject uiRoot;
+    [SerializeField] private TMP_Text stageText;
     [SerializeField] private TMP_Text headlineText;
     [SerializeField] private TMP_Text messageText;
     [Header("Value")]
     [SerializeField] private string[] successMessages;
     [SerializeField] private string[] failMessages;
+    [SerializeField] private int lastStageIdx;
 
     private ClearType clearType;
 
@@ -44,6 +46,8 @@ public class GameEndManager : MonoBehaviour
         GameObject stageObj = Resources.Load<GameObject>($"Stages/Stage_{sceneIdx}");
 
         Instantiate(stageObj, Vector3.zero, Quaternion.identity);
+
+        stageText.text = $"Stage_{sceneIdx}";
     }
 
     public void GameClearUI()
@@ -76,10 +80,18 @@ public class GameEndManager : MonoBehaviour
 
         input.Dispose();
 
+        int nowStage = PlayerPrefs.GetInt("NextSceneIdx");
+
+        if (nowStage >= lastStageIdx)
+        {
+            SceneManager.LoadScene("Intro");
+            return;
+        }
+
         int nextSceneIdx = clearType switch
         {
-            ClearType.Clear => PlayerPrefs.GetInt("NextSceneIdx") + 1,
-            ClearType.Fail => PlayerPrefs.GetInt("NextSceneIdx"),
+            ClearType.Clear => nowStage + 1,
+            ClearType.Fail => nowStage,
             _ => 0
         };
         PlayerPrefs.SetInt("NextSceneIdx", nextSceneIdx);

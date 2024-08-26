@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8628738521285770034}
   m_Layer: 6
   m_Name: mixamorig:LeftHandMiddle3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5575969359601781591}
   m_Layer: 6
   m_Name: mixamorig:RightHandMiddle2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 611539451043620123}
   m_Layer: 6
   m_Name: mixamorig:Spine1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 6748435686604252509}
   m_Layer: 6
   m_Name: mixamorig:LeftToe_End
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 3201772584805734186}
   m_Layer: 6
   m_Name: mixamorig:RightHandMiddle1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 983361783494034394}
   m_Layer: 6
   m_Name: mixamorig:LeftHandIndex2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 7909900386731815830}
   m_Layer: 6
   m_Name: mixamorig:LeftHandThumb4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 3014715500377816575}
   m_Layer: 6
   m_Name: mixamorig:LeftHandIndex1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5841722998802917908}
   m_Layer: 6
   m_Name: mixamorig:RightHandRing1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 3452180780666835445}
   m_Layer: 6
   m_Name: mixamorig:LeftHandRing1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 527900961170283060}
   m_Layer: 6
   m_Name: mixamorig:RightHandIndex3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 4484020422374339107}
   m_Layer: 6
   m_Name: Trump
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 2450134667729196079}
   m_Layer: 6
   m_Name: mixamorig:LeftHand
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 2636695757918361444}
   m_Layer: 6
   m_Name: mixamorig:RightHandMiddle3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 202454457791423827}
   m_Layer: 6
   m_Name: mixamorig:Neck
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 8961862131036197927}
   m_Layer: 6
   m_Name: mixamorig:LeftHandRing2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1421,11 +1421,13 @@ MonoBehaviour:
   vcam: {fileID: 8592369722480410747}
   volume: {fileID: 3036328099010826653}
   bloodPrefab: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
-  bulletSpeed: 0
   radius: 5
-  trumpLayer:
+  targetLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 64
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 193
 --- !u!1 &2259655921946428913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1439,7 @@ GameObject:
   - component: {fileID: 8491687591627173871}
   m_Layer: 6
   m_Name: mixamorig:RightHandThumb3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1469,7 +1471,7 @@ GameObject:
   - component: {fileID: 3591520984998060493}
   m_Layer: 6
   m_Name: mixamorig:LeftShoulder
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1501,7 +1503,7 @@ GameObject:
   - component: {fileID: 674374303539544578}
   m_Layer: 6
   m_Name: mixamorig:LeftHandThumb3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,7 +1535,7 @@ GameObject:
   - component: {fileID: 5365723088415507581}
   m_Layer: 6
   m_Name: mixamorig:LeftHandPinky1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1567,7 @@ GameObject:
   - component: {fileID: 5126664051153342362}
   m_Layer: 6
   m_Name: mixamorig:RightHandPinky1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1599,7 @@ GameObject:
   - component: {fileID: 5578097901952596121}
   m_Layer: 6
   m_Name: mixamorig:LeftHandPinky4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1831,7 +1833,7 @@ GameObject:
   - component: {fileID: 5475766382950128351}
   m_Layer: 6
   m_Name: mixamorig:RightShoulder
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1863,7 +1865,7 @@ GameObject:
   - component: {fileID: 1406939299665010807}
   m_Layer: 6
   m_Name: mixamorig:LeftHandPinky2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1897,7 @@ GameObject:
   - component: {fileID: 605866474372704690}
   m_Layer: 6
   m_Name: mixamorig:RightHandThumb2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1927,7 +1929,7 @@ GameObject:
   - component: {fileID: 3897914421080711944}
   m_Layer: 6
   m_Name: mixamorig:RightHandPinky4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2079,7 +2081,7 @@ GameObject:
   - component: {fileID: 3982093496240924649}
   m_Layer: 6
   m_Name: mixamorig:Head
-  m_TagString: Trump_Head
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2242,7 +2244,7 @@ GameObject:
   - component: {fileID: 8905795706540606537}
   m_Layer: 6
   m_Name: mixamorig:RightFoot
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2358,7 +2360,7 @@ GameObject:
   - component: {fileID: 3765483197360894883}
   m_Layer: 6
   m_Name: mixamorig:LeftHandPinky3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2390,7 +2392,7 @@ GameObject:
   - component: {fileID: 4884664482759320837}
   m_Layer: 6
   m_Name: mixamorig:LeftHandRing3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2422,7 +2424,7 @@ GameObject:
   - component: {fileID: 3043788449379083766}
   m_Layer: 6
   m_Name: mixamorig:HeadTop_End
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2453,7 +2455,7 @@ GameObject:
   - component: {fileID: 7319859124324929500}
   m_Layer: 6
   m_Name: mixamorig:LeftFoot
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2580,7 +2582,7 @@ GameObject:
   - component: {fileID: 6740142576111461225}
   m_Layer: 6
   m_Name: mixamorig:RightHandRing4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2742,7 +2744,7 @@ GameObject:
   - component: {fileID: 6720507433497664897}
   m_Layer: 6
   m_Name: mixamorig:RightHandIndex4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2773,7 +2775,7 @@ GameObject:
   - component: {fileID: 7716886463106335782}
   m_Layer: 6
   m_Name: mixamorig:RightHandRing2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2907,7 +2909,7 @@ GameObject:
   - component: {fileID: 4544269226984507177}
   m_Layer: 6
   m_Name: mixamorig:RightHandThumb1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,7 +2941,7 @@ GameObject:
   - component: {fileID: 7687689398387918488}
   m_Layer: 6
   m_Name: mixamorig:LeftHandRing4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3156,7 +3158,7 @@ GameObject:
   - component: {fileID: 5722090096643491848}
   m_Layer: 6
   m_Name: mixamorig:RightToeBase
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3188,7 +3190,7 @@ GameObject:
   - component: {fileID: 6361988283985970635}
   m_Layer: 6
   m_Name: mixamorig:RightHand
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3224,7 +3226,7 @@ GameObject:
   - component: {fileID: 6522119931772020684}
   m_Layer: 6
   m_Name: mixamorig:LeftHandMiddle4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3387,7 +3389,7 @@ GameObject:
   - component: {fileID: 7029903256151490175}
   m_Layer: 7
   m_Name: object_1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3474,7 +3476,7 @@ GameObject:
   - component: {fileID: 1922854877275564291}
   m_Layer: 6
   m_Name: mixamorig:LeftHandMiddle2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3506,7 +3508,7 @@ GameObject:
   - component: {fileID: 4621088506062984149}
   m_Layer: 6
   m_Name: mixamorig:RightHandRing3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3552,7 +3554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7056793249478032643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15495859, y: -0.7025727, z: 0.16114962, w: 0.6755814}
+  m_LocalRotation: {x: 0.1549586, y: -0.70257264, z: 0.1611496, w: 0.67558146}
   m_LocalPosition: {x: -398.63, y: 72.39, z: -13.73}
   m_LocalScale: {x: 0.8000001, y: 0.79999995, z: 0.80000013}
   m_ConstrainProportionsScale: 0
@@ -3610,7 +3612,7 @@ GameObject:
   - component: {fileID: 5753982028435526371}
   m_Layer: 6
   m_Name: mixamorig:LeftToeBase
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3642,7 +3644,7 @@ GameObject:
   - component: {fileID: 1319311748060016081}
   m_Layer: 6
   m_Name: mixamorig:RightHandMiddle4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3673,7 +3675,7 @@ GameObject:
   - component: {fileID: 8535325828077363454}
   m_Layer: 6
   m_Name: mixamorig:LeftHandIndex4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3874,7 +3876,7 @@ GameObject:
   - component: {fileID: 6756633198828075326}
   m_Layer: 6
   m_Name: mixamorig:LeftHandThumb1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3906,7 +3908,7 @@ GameObject:
   - component: {fileID: 7299416322892232344}
   m_Layer: 6
   m_Name: mixamorig:LeftHandIndex3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3938,7 +3940,7 @@ GameObject:
   - component: {fileID: 2963100202005705204}
   m_Layer: 6
   m_Name: mixamorig:RightHandThumb4
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4064,7 +4066,7 @@ GameObject:
   - component: {fileID: 409102663997091149}
   m_Layer: 6
   m_Name: mixamorig:RightHandPinky3
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4096,7 +4098,7 @@ GameObject:
   - component: {fileID: 8632448576956088880}
   m_Layer: 6
   m_Name: mixamorig:LeftHandThumb2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4167,7 +4169,7 @@ GameObject:
   - component: {fileID: 135704093633668283}
   m_Layer: 6
   m_Name: object_0
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4303,7 +4305,7 @@ GameObject:
   - component: {fileID: 1005603202672499928}
   m_Layer: 6
   m_Name: mixamorig:LeftHandMiddle1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4335,7 +4337,7 @@ GameObject:
   - component: {fileID: 4288305098924557410}
   m_Layer: 6
   m_Name: mixamorig:RightHandIndex1
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4367,7 +4369,7 @@ GameObject:
   - component: {fileID: 5784305079061721772}
   m_Layer: 6
   m_Name: mixamorig:RightHandIndex2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4399,7 +4401,7 @@ GameObject:
   - component: {fileID: 3655612420078510455}
   m_Layer: 6
   m_Name: mixamorig:RightToe_End
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4559,7 +4561,7 @@ GameObject:
   - component: {fileID: 8641788589825598423}
   m_Layer: 6
   m_Name: mixamorig:RightHandPinky2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4591,7 +4593,7 @@ GameObject:
   - component: {fileID: 2378476277532315092}
   m_Layer: 6
   m_Name: mixamorig:Spine2
-  m_TagString: Untagged
+  m_TagString: Trump_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
